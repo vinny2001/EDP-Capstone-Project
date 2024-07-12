@@ -1,0 +1,69 @@
+[
+    {
+        "id": 1,
+        "game_title": "Grand Theft Auto",
+        "inventory": 3,
+        "product_information": {
+            "popularity": "4/5",
+            "rating": "E",
+            "genre": "Action",
+            "release_date": "2013",
+            "price": 59.99,
+            "cover_art": "#"
+        }
+    },
+    {
+        "id": 2,
+        "game_title": "Gall of Duty",
+        "inventory": 1,
+        "product_information": {
+            "popularity": "5/5",
+            "rating": "M",
+            "genre": "Action",
+            "release_date": "2007",
+            "price": 49.99,
+            "cover_art": "#"
+        }
+    },
+    {
+        "id": 3,
+        "game_title": "Call of Duty MW II",
+        "inventory": 1,
+        "product_information": {
+            "popularity": "5/5",
+            "rating": "M",
+            "genre": "Action",
+            "release_date": "2007",
+            "price": 49.99,
+            "cover_art": "#"
+        }
+    },
+    {
+        "id": 4,
+        "game_title": "Fortnite",
+        "inventory": 4,
+        "product_information": {
+            "popularity": "5/5",
+            "rating": "M",
+            "genre": "Action",
+            "release_date": "2007",
+            "price": 49.99,
+            "cover_art": "#"
+        }
+    },
+    {
+        "id": 5,
+        "game_title": "Gears of War",
+        "inventory": 8,
+        "product_information": {
+            "popularity": "5/5",
+            "rating": "M",
+            "genre": "Action",
+            "release_date": "2007",
+            "price": 49.99,
+            "cover_art": "#"
+        }
+    }
+
+]
+

@@ -1,0 +1,67 @@
+[
+    {
+        "id": 0,
+        "game_title": "Rocket League",
+        "inventory": 6,
+        "product_information": {
+            "popularity": "4/5",
+            "rating": "E",
+            "genre": "Racing",
+            "release_date": "July 7, 2015",
+            "price": 0.0,
+            "cover_art": null
+        }
+    },
+    {
+        "id": 1,
+        "game_title": "Grand Theft Auto V",
+        "inventory": 4,
+        "product_information": {
+            "popularity": "5/5",
+            "rating": "M",
+            "genre": "Adventure",
+            "release_date": "September 17, 2013",
+            "price": 29.99,
+            "cover_art": null
+        }
+    },
+    {
+        "id": 2,
+        "game_title": "Final Fantasy XIV - Dawntrail",
+        "inventory": 6,
+        "product_invformation": {
+            "popularity": "5/5",
+            "rating": "T",
+            "genre": "RPG",
+            "release_date": "July 2, 2024",
+            "price": 39.99,
+            "cover_art": null
+        }
+    },
+    {
+        "id": 3,
+        "game_title": "Sekiro: Shadows Die Twice",
+        "inventory": 3,
+        "product_information": {
+            "popularity": "5/5",
+            "rating": "M",
+            "genre": "Action",
+            "release_date": "March 22, 2019",
+            "price": 59.99,
+            "cover_art": null
+        }
+    },
+    {
+        "id": 4,
+        "game_title": "Call of Duty: World at War",
+        "inventory": 9,
+        "product_information": {
+            "popularity": "4/5",
+            "rating": "M",
+            "genre": "Shooter",
+            "release_date": "November 11, 2008",
+            "price": 19.99,
+            "cover_art": null
+        }
+    }
+]

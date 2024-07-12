@@ -3,12 +3,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Navbar() {
   return (
-    <nav class="navbar bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand">Game Store</a>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
-          <button class="btn btn-outline-success" type="submit">Search</button>
+    <nav className="navbar bg-light">
+      <div className="container-fluid">
+        <a className="navbar-brand">Game Store</a>
+        <form className="d-flex" role="search">
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"></input>
+          <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </nav>

@@ -10,47 +10,30 @@ import {
   Routes,
   Link
 } from "react-router-dom";
-async function fetchData() {
-  /* try {
-    const response = await fetch(import.meta.env.VITE_GAMES_API_URL);
-      if (!response.ok) {
-          throw new Error('Data could not be fetched!');
-      }
-      console.log("Response: " + JSON.stringify(response.body));
-      const json_response = await response.json();
-      console.log("Json response: " + json_response);
-      setData(json_response); // assign JSON response to the data variable.
-  } catch (error) {
-      console.error('Error fetching games:', error);
-  } */
-
-  fetch("http://localhost:3000", {
-    method: 'get',
-    dataType: 'json',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  })
-  .then((response) => 
-    {
-      response.json() // << This is the problem
-    })
-  .then((responseData) => { // responseData = undefined
-
-      console.log(responseData);
-    })
-    .catch(function(err) {
-      console.log(err);
-    })
-};
+  
 
 function App() {
 
   const [data, setData] = useState([]);
-  useEffect(() => {
-    let data = fetchData();
-    setData(data);
+  async function fetchData() {
+    try{
+      fetch("http://localhost:3000/")
+      .then((res) => res.json())
+      .then((games) => {
+          console.log("Games:" + games)
+          setData(games)
+      
+      }).catch((error) => {
+        console.error(error)
+      });
+    } catch(error){
+      console.log(error)
+    }
+
+  };
+  useEffect(() =>{
+    fetchData();
+    console.log("Data" + data);
   }, []);
   
 
@@ -64,6 +47,7 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<GameList data={data} />} />
+          
         </Routes>
       </div>
     </Router>

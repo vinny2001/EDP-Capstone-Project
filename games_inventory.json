@@ -8,7 +8,7 @@
             "rating": "E",
             "genre": "Racing",
             "release_date": "July 7, 2015",
-            "price": 0.0,
+            "price": "0.0",
             "cover_art": null
         }
     },
@@ -21,7 +21,7 @@
             "rating": "M",
             "genre": "Adventure",
             "release_date": "September 17, 2013",
-            "price": 29.99,
+            "price": "29.99",
             "cover_art": null
         }
     },
@@ -34,7 +34,7 @@
             "rating": "T",
             "genre": "RPG",
             "release_date": "July 2, 2024",
-            "price": 39.99,
+            "price": "39.99",
             "cover_art": null
         }
     },
@@ -47,7 +47,7 @@
             "rating": "M",
             "genre": "Action",
             "release_date": "March 22, 2019",
-            "price": 59.99,
+            "price": "59.99",
             "cover_art": null
         }
     },
@@ -60,7 +60,7 @@
             "rating": "M",
             "genre": "Shooter",
             "release_date": "November 11, 2008",
-            "price": 19.99,
+            "price": "19.99",
             "cover_art": null
         }
     }

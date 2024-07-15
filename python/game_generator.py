@@ -30,7 +30,7 @@ def gen_randoms(n = 1000):
     with open(filename, "w", newline="") as file:
         writer = csv.writer(file)
         writer.writerow(
-            ["id", "name", "popularity", "rating", "genre", "price"]
+            ["id", "game_title", "popularity", "rating", "genre", "price"]
         )
         writer.writerows(data)
     print(f"Successfully generated {n} entries!")

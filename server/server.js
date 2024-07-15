@@ -28,6 +28,22 @@ app.get('/', async (req, res) => {
     }
 });
 
+app.get("/cat/:category", async (req, res) => {
+    try {
+        const {category} = req.params;
+        console.log("Category:",category)
+        const client = await MongoClient.connect(url);
+        const db = client.db(dbName);
+        const collection = db.collection(collectionName);
+        const games = await collection.find({"product_information.genre": `${category}`}).toArray();
+        res.json(games);
+    } catch (err) {
+        console.error("Error:", err);
+        res.status(500).send("Game over! ☹");
+    }
+
+});
+
 app.post("/search", async (req, res) => {
     try {
         const {searchTerm} = req.body;

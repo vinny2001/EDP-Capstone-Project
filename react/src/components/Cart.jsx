@@ -35,7 +35,7 @@ const Cart = () => {
     };
 
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
 
         // Prepare data for MongoDB collection
@@ -47,7 +47,29 @@ const Cart = () => {
         };
 
         // Send formData to MongoDB or perform further actions
-        console.log(formData); // Replace with MongoDB operation
+        console.log(formData);
+
+        try {
+            // TODO: Make a POST request to the API to add the sock
+            const response = await fetch(`http://localhost:3000/order`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data);
+            // Handle post submission logic (like showing a success message)
+        } catch (error) {
+            console.error("Error posting data", error);
+            // Handle errors here
+        }
 
         alert("Order has been confirmed!");
 

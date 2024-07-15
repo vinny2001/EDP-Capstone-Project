@@ -1,0 +1,36 @@
+.cart-container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.item-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.item-price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.btn {
+    margin-left: 10px;
+}

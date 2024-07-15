@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap CSS
 import GameList from './components/GameList';
+import Game from "./components/Game";
 import {
   BrowserRouter as Router,
   Route,
@@ -42,12 +43,10 @@ function App() {
     <Router>
       <div className="container-fluid">
 
-        <div className="row" id="main-row">
-          <h1 className="header text-center mt-3">Game List</h1>
-        </div>
+        
         <Routes>
           <Route path="/" element={<GameList data={data} />} />
-          
+          <Route path="/:id" element={<Game data={data} />} />
         </Routes>
       </div>
     </Router>

@@ -46,11 +46,11 @@ const Cart = () => {
             payment: payment
         };
 
-        // Send formData to MongoDB or perform further actions
+        // Log/ Send formData to MongoDB
         console.log(formData);
+        
 
         try {
-            // TODO: Make a POST request to the API to add the sock
             const response = await fetch(`http://localhost:3000/order`, {
                 method: "POST",
                 headers: {

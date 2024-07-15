@@ -45,7 +45,8 @@ const Game = ({ data }) => {
     if (!gameData) {
         return <div>Game data not found.</div>;
     }
-    
+    console.log("Game Data: " + gameData.game_title);
+
     return (
     <div className="container">
         <div className="card">

@@ -1,25 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useParams } from 'react-router-dom';
+import { useParams} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Game = ({ data }) => {
 
     let { id } = useParams();
     const [gameData, setGameData] = useState(null);
     const [loading, setLoading] = useState(true);
+    const navigate = useNavigate();
 
     function goBack() {
         window.history.back();
     }
 
     function addToCart() {
-        //1. Pass the gameData as a param for cart page
         
-        //2. Display Message of Game Added to Cart
-        alert(gameData.game_title + " added to cart.")
+        // 1. Extract game title and price from gameData
+        if (data[id]) {
+            const { game_title, product_information: { price } } = gameData;
 
-        //3. Navigate to Cart
-    }
+            // Save to localStorage
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ game_title, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Navigate to cart page
+            navigate('/cart');
+
+            alert(`${game_title} added to cart.`);
+        } else {
+            console.error('gameData or its attributes are not available.');
+        }
+    };
 
     useEffect(() => {
         // Simulate data fetching

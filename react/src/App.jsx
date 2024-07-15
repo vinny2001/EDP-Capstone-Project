@@ -5,11 +5,11 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap CSS
 import GameList from './components/GameList';
 import Game from "./components/Game";
+import Cart from "./components/Cart";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Link
 } from "react-router-dom";
   
 
@@ -46,6 +46,7 @@ function App() {
         <Routes>
           <Route path="/" element={<GameList data={data} />} />
           <Route path="/:id" element={<Game data={data} />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </Router>

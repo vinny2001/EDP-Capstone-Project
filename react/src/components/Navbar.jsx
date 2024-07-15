@@ -14,7 +14,7 @@ function Navbar() {
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form>
           
-          <a href="#" className="nav-link mx-4">
+          <a href="/cart" className="nav-link mx-4">
             <i className="fas fa-shopping-cart"></i>
           </a>
 

@@ -6,6 +6,8 @@ import '../styles/Cart.css'; // Import the custom CSS file
 const Cart = () => {
     const [cart, setCart] = useState([]);
     const [total, setTotal] = useState(0);
+    const [shipping, setShipping] = useState('');
+    const [payment, setPayment] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -32,6 +34,28 @@ const Cart = () => {
         navigate('/');
     };
 
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        // Prepare data for MongoDB collection
+        const formData = {
+            items: cart.map(item => item.game_title),
+            total: total,
+            shipping: shipping,
+            payment: payment
+        };
+
+        // Send formData to MongoDB or perform further actions
+        console.log(formData); // Replace with MongoDB operation
+
+        alert("Order has been confirmed!");
+
+        // Clear form fields if needed
+        setShipping('');
+        setPayment('');
+    };
+
     return (
         <div className="cart-container">
             <h1 className='mb-5'>Cart</h1>
@@ -54,6 +78,46 @@ const Cart = () => {
             )}
 
             <h4 className='text-start mt-4'>Total: ${total}</h4>
+
+            <form onSubmit={handleSubmit}>
+                <div className="row ">
+                    <div className="col-lg-6 col-sm-12">
+                        <div className="form-group mt-4">
+                        <label htmlFor="shippingInput">Shipping:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="shippingInput"
+                            value={shipping}
+                            onChange={(e) => setShipping(e.target.value)}
+                            required
+                        />
+                        </div>
+                    </div>
+                </div>
+                <div className="row mt-3">
+                    <div className="col-lg-6 col-sm-12">
+                        <div className="form-group">
+                        <label htmlFor="paymentInput">Payment:</label>
+                        <input
+                            type="text"
+                            className="form-control"
+                            id="paymentInput"
+                            value={payment}
+                            onChange={(e) => setPayment(e.target.value)}
+                            required
+                        />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row mt-3">
+                    <div className="col-lg-6 col-sm-12 text-end">
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                
+            </form>
 
             <div className='text-start mt-5'>
                 <button className="btn btn-primary" onClick={handleReturnHome}>Home</button>

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap CSS
 import GameList from './components/GameList';
 import Game from "./components/Game";
 import Cart from "./components/Cart";
+import Navbar from "./components/Navbar";
 import {
   BrowserRouter as Router,
   Route,
@@ -40,6 +41,7 @@ function App() {
   return (
     <>
     <Router>
+      <Navbar setData={setData}/>
       <div className="container-fluid">
 
         

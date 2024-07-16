@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';  // Import Bootstrap CSS
 import GameList from './components/GameList';
+import CategoryList from './components/CategoryList';
 import Game from "./components/Game";
 import Cart from "./components/Cart";
 import Navbar from "./components/Navbar";
@@ -49,6 +50,7 @@ function App() {
           <Route path="/" element={<GameList data={data} />} />
           <Route path="/:id" element={<Game data={data} />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/cat/:category" element={<CategoryList />} />
         </Routes>
       </div>
     </Router>

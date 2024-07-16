@@ -113,5 +113,5 @@ def gen_inventory(a = 2, b = 10):
     
 
 if __name__ == "__main__":
-    # gen_randoms(1000)
-    gen_inventory()
+    gen_randoms(1000)
+    # gen_inventory()

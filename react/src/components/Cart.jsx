@@ -134,7 +134,7 @@ const Cart = () => {
                 </div>
 
                 <div className="row mt-3">
-                    <div className="col-lg-6 col-sm-12 text-end">
+                    <div className="col-lg-6 col-sm-12 text-end mx-auto">
                         <button type="submit" className="btn btn-primary">Submit</button>
                     </div>
                 </div>

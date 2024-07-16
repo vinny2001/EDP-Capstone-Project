@@ -1,8 +1,33 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate, Navigate } from "react-router-dom";
+import { useState, useEffect } from 'react'
 
-const GameList = ({ data }) => {
+import { useParams } from 'react-router-dom';
+
+const CategoryList = () => {
+const [data, setData] = useState([]);
+const {category} = useParams();
+
+  async function fetchData() {
+    try{
+      fetch(`http://localhost:3000/cat/${category}`)
+      .then((res) => res.json())
+      .then((games) => {
+          setData(games)
+      
+      }).catch((error) => {
+        console.error(error)
+      });
+    } catch(error){
+      console.log(error)
+    }
+
+  };
+  useEffect(() =>{
+    fetchData();
+    console.log("Data" + data);
+  }, []);
 
   return (
     <div className="container">
@@ -24,4 +49,4 @@ const GameList = ({ data }) => {
   );
 };
 
-export default GameList;
+export default CategoryList;

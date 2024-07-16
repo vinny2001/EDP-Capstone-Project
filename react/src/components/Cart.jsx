@@ -102,8 +102,8 @@ const Cart = () => {
             <h4 className='text-start mt-4'>Total: ${total}</h4>
 
             <form onSubmit={handleSubmit}>
-                <div className="row ">
-                    <div className="col-lg-6 col-sm-12">
+                <div className="row">
+                    <div className="col-lg-6 col-sm-12 mx-auto">
                         <div className="form-group mt-4">
                         <label htmlFor="shippingInput">Shipping:</label>
                         <input
@@ -118,7 +118,7 @@ const Cart = () => {
                     </div>
                 </div>
                 <div className="row mt-3">
-                    <div className="col-lg-6 col-sm-12">
+                    <div className="col-lg-6 col-sm-12 mx-auto">
                         <div className="form-group">
                         <label htmlFor="paymentInput">Payment:</label>
                         <input
